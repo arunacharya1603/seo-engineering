@@ -1,8 +1,19 @@
-# SEO Engineering Skill
+# seo-engineering: SEO skills for AI coding agents
 
-A portable, project-agnostic SEO engineering skill for coding agents.
+**seo-engineering** is a free, project-agnostic SEO skill for Codex, Claude Code, Cursor, and other coding agents. It provides instructions, references, and templates for auditing websites, planning search engine optimization work, implementing changes, and validating the results.
 
-Free to install and use, and built in public. Use it to audit a website, plan SEO improvements, implement changes, and validate the results.
+Built in public on [GitHub](https://github.com/arunacharya1603/seo-engineering) and available on [npm](https://www.npmjs.com/package/seo-engineering).
+
+## SEO skills and workflows
+
+Use this single agent skill for:
+
+- **Technical SEO audits:** crawling, indexing, robots.txt, XML sitemaps, canonical URLs, redirects, and rendered content.
+- **On-page SEO and structured data:** titles, meta descriptions, headings, internal links, and Schema.org markup.
+- **Keyword and content planning:** search intent, information architecture, topic coverage, and evidence-based content briefs.
+- **Performance and site changes:** Core Web Vitals, migration checks, ecommerce pages, and international SEO.
+
+The included [audit report template](https://github.com/arunacharya1603/seo-engineering/blob/main/templates/seo-audit-report-template.md) and [content brief template](https://github.com/arunacharya1603/seo-engineering/blob/main/templates/content-brief-template.md) help organize findings and next steps. The skill adapts to the project's framework and available tools.
 
 ## Install
 
@@ -42,9 +53,13 @@ Ask the coding agent to use the `seo-engineering` skill to audit, plan, implemen
 
 The skill supports many site types and frameworks; it does not promise rankings. For current requirements, consult the linked official documentation.
 
-Example prompt:
+Example requests:
 
 > Use the seo-engineering skill to audit this project's SEO. Report the findings with evidence and recommend the highest-priority improvements.
+
+> Use seo-engineering to check robots.txt, XML sitemaps, canonical URLs, and redirects. Explain which issues could prevent important pages from being indexed.
+
+> Use seo-engineering to create a content brief for this page, including search intent, headings, and relevant internal links. Identify any research or evidence still needed.
 
 ## Follow the build
 

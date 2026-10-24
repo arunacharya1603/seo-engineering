@@ -1,13 +1,18 @@
 {
   "name": "seo-engineering",
-  "version": "0.1.0",
-  "description": "A free SEO engineering skill for AI coding agents: technical audits, content planning, implementation, and validation.",
+  "version": "0.1.1",
+  "description": "SEO skills for Codex, Claude Code, and Cursor: technical SEO audits, structured data, indexing, content planning, and implementation with seo-engineering.",
   "keywords": [
+    "seo-engineering",
     "seo",
-    "technical-seo",
+    "seo-skills",
+    "seo skills",
+    "skills",
     "agent-skills",
-    "ai-agents",
-    "coding-agents",
+    "technical-seo",
+    "seo-audit",
+    "structured-data",
+    "search-engine-optimization",
     "codex",
     "claude-code",
     "cursor"
