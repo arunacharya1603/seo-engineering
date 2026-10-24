@@ -6,6 +6,8 @@ Free to install and use, and built in public. Use it to audit a website, plan SE
 
 ## Install
 
+### Install in your coding agent
+
 Run this command from your project directory:
 
 ```bash
@@ -13,6 +15,18 @@ npx skills add arunacharya1603/seo-engineering
 ```
 
 Follow the prompts to choose your coding agent and installation scope. This command requires Node.js and npm.
+
+### Download from npm
+
+```bash
+npm install --save-dev seo-engineering
+```
+
+The npm package contains the skill instructions, references, and templates. To install that downloaded copy in your coding agent, run:
+
+```bash
+npx skills add ./node_modules/seo-engineering
+```
 
 ### Manual installation for Codex
 

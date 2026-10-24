@@ -1,0 +1,32 @@
+{
+  "name": "seo-engineering",
+  "version": "0.1.0",
+  "description": "A free SEO engineering skill for AI coding agents: technical audits, content planning, implementation, and validation.",
+  "keywords": [
+    "seo",
+    "technical-seo",
+    "agent-skills",
+    "ai-agents",
+    "coding-agents",
+    "codex",
+    "claude-code",
+    "cursor"
+  ],
+  "homepage": "https://github.com/arunacharya1603/seo-engineering#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arunacharya1603/seo-engineering.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arunacharya1603/seo-engineering/issues"
+  },
+  "files": [
+    "SKILL.md",
+    "references/",
+    "templates/"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
