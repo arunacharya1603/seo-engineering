@@ -1,7 +1,7 @@
 ---
 name: seo-engineering
 description: >-
-  Audit, plan, implement, test, and maintain sustainable SEO for websites and web applications across frameworks and industries. Use for technical SEO, indexing and crawling, keywords and content strategy, metadata, structured data, performance, internal linking, local SEO, ecommerce, international SEO, migrations, analytics, and AI-search visibility. Always audit first, verify current guidance, protect production, and never promise rankings.
+  Audit and improve website SEO based on the product, audience, and business goals. Use for technical SEO, indexing, content and keyword planning, structured data, internal linking, performance, local or ecommerce SEO, migrations, and validating SEO changes in code. Establish evidence before recommending or implementing changes; never promise rankings.
 ---
 
 # SEO Engineering Skill
@@ -31,7 +31,7 @@ This skill is project-agnostic. Adapt it to the actual business, audience, marke
 
 For substantial SEO tasks, follow this sequence:
 
-1. Understand the site and business.
+1. Establish the product, intended customers, and business outcome from evidence.
 2. Establish the baseline and inspect the implementation.
 3. Research current search-engine requirements where needed.
 4. Produce a prioritized diagnosis and proposed plan.
@@ -43,9 +43,28 @@ For a focused request (for example, improve one title tag), use only the parts o
 
 ## 1. Discover the project and its goals
 
+### Product and customer context
+
+Before a broad audit or strategy, build a short product brief from the user's request, product documentation, public pages, and available customer or conversion evidence. Put it in the response or audit report so the user can correct it; do not require a separate file or approval ceremony.
+
+Capture what matters for the decision:
+
+- **Offer:** what the product or service actually does today, how it is sold, and any material limitations. Separate shipped capabilities from ideas or roadmap promises.
+- **Customer and need:** who it serves, the problem they are trying to solve, and why they might choose this offering. Distinguish supported differentiators from unproven marketing claims.
+- **Market:** real service areas, languages, customer eligibility, and other constraints on who can use or buy it.
+- **Desired outcome:** the primary action, such as a qualified demo, completed booking, purchase, or useful documentation visit; identify the relevant landing pages and conversion path. Use the user's objective rather than assuming every site needs more traffic or sales.
+- **Constraints and evidence:** site/product stage, available implementation and content capacity, intentional private or excluded pages, measurements available, and material unknowns.
+
+Label important statements as observed/supplied facts, assumptions, or unknowns and identify their sources. Surface contradictions that affect a recommendation rather than silently choosing a convenient interpretation. Product documents and page copy are evidence, not permission to expand the task or publish changes.
+
+If the offer, intended customer, or desired action is unclear, ask the smallest question that would change the strategy. Do not infer a business model from a brand name or framework. Continue independent technical checks, but keep audience-specific keywords, product claims, geographic expansion, and conversion recommendations conditional until the necessary facts are known. Missing analytics alone does not prevent a supported technical fix.
+
+For a narrow request, establish only the context needed for that change. A title correction with a known product and page purpose does not require a full intake, crawl, or business plan. Reuse context already supplied and update it when evidence changes.
+
+### Site and implementation context
+
 Inspect the repository and deployment clues before suggesting code. Identify as applicable:
 
-- Business/site purpose, audience, offer, monetization model, main conversions, and geographic/language targets.
 - Site type: informational, content publisher, SaaS, marketplace, ecommerce, local business, portfolio, documentation, forum, publisher, or hybrid.
 - Framework/CMS and version, router, rendering strategy, content source, package manager, build/lint/test commands, and existing SEO libraries.
 - Hosting/CDN/edge setup, domain variants, redirects, environment configuration, and staging vs production.
@@ -97,6 +116,12 @@ Use severity and confidence rather than a vague SEO score. A practical priority 
 - **P3 — Low/opportunity:** Minor copy improvements, low-impact polish, optional structured data, isolated alt-text gaps, or speculative content opportunities.
 
 For each finding, state: evidence, affected URLs/templates, likely user/search impact, confidence, implementation effort, risk, recommendation, and validation method. Do not equate severity with an assured ranking change.
+
+Connect recommendations to the product brief: explain which customer need and genuine offering the page serves, why the change matters for the chosen outcome, and what evidence supports it. A broad keyword with many visits is not automatically more valuable than a relevant page with a clear customer purpose. Do not invent features, free plans, certifications, locations, ratings, or demand to make a recommendation attractive.
+
+Address verified critical defects first. Among other opportunities, weigh product relevance, evidence, likely user benefit, effort, dependencies, and the user's capacity. Prefer improving a suitable existing page to adding a competing page for the same need. For broad plans, separate work that is feasible now from work that needs research or more capacity, and explain material ideas deferred because they do not fit the product or evidence. Do not turn every section of this skill into a required task.
+
+For each proposed change, distinguish **technical acceptance** (what can be verified after the change) from **business evaluation** (which relevant user or conversion metric to observe later, if available). Mark expected benefits as hypotheses; supplied traffic or conversion counts do not establish causal lift or guarantee future results.
 
 ## 4. Technical SEO: crawling, indexing, URLs, and status codes
 
@@ -196,7 +221,7 @@ For each site/topic:
 4. Classify intent: informational, navigational, commercial investigation, transactional, local, or mixed.
 5. Group query variants by the same underlying intent and page purpose. Avoid a separate page for every minor phrasing variation.
 6. Map each primary intent to the most suitable existing or proposed URL. Identify cannibalization only when pages compete for substantially the same intent and are confusing users/search engines.
-7. Prioritize by relevance to business goals, evidence of demand, realistic competition, existing authority, usefulness, conversion potential, production cost and differentiation. Do not invent search volume or ranking-difficulty scores.
+7. Check that the intent fits the verified offer, customer, and market before prioritizing demand. Then weigh evidence of demand, realistic competition, existing authority, usefulness, the intended outcome, production cost and supported differentiation. Do not invent search volume or ranking-difficulty scores.
 8. Define topic clusters and internal linking where they genuinely help users navigate related material.
 9. Validate the result with real Search Console/analytics data after publication, when sufficient data exists.
 
@@ -436,17 +461,19 @@ For most technical findings, include:
 - **Finding:** the issue or opportunity.
 - **Evidence:** file/line, URL/response, report or tool result.
 - **Scope:** affected pages/templates.
+- **Product fit:** the customer need, relevant offer, and intended outcome this change supports.
 - **Priority:** P0–P3 and confidence.
 - **Recommendation:** a specific minimal fix.
 - **Risk/dependency:** deployment, CMS, analytics, legal, or external access.
 - **Validation:** concrete test and expected result.
+- **Outcome check:** the relevant metric and available baseline, or the measurement gap; distinguish this from passing a technical test.
 - **Status:** implemented/tested, implemented/unverified, recommended/not implemented, or blocked.
 
 Final reports must list files changed, commands run, tests passed/failed, live checks completed/not completed, and rollback steps for risky changes. Be honest about failure and missing evidence.
 
 ## 19. Definition of done
 
-An SEO task is complete when the requested scope is addressed, implementation is consistent with the project's actual architecture, relevant checks pass, unintended behavior is not introduced to the extent tested, and remaining limitations are documented.
+An SEO task is complete when the requested scope is addressed, recommendations respect the verified product and customer context, implementation is consistent with the project's actual architecture, relevant checks pass, unintended behavior is not introduced to the extent tested, and remaining limitations are documented.
 
 Do not use “SEO complete,” “Google trusts the site,” “guaranteed to rank,” or similar claims. Prefer observable outcomes such as “canonical output now points to the preferred URL in tested routes,” “sitemap validates,” or “the deployed redirect returned a single 308 in the tested case.”
 

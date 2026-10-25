@@ -15,6 +15,14 @@ Use this single agent skill for:
 
 The included [audit report template](https://github.com/arunacharya1603/seo-engineering/blob/main/templates/seo-audit-report-template.md) and [content brief template](https://github.com/arunacharya1603/seo-engineering/blob/main/templates/content-brief-template.md) help organize findings and next steps. The skill adapts to the project's framework and available tools.
 
+## How it adapts to your product
+
+For a broad SEO task, the agent first summarizes the actual offer, intended customers, market, and desired outcome using your project and supplied evidence. It identifies assumptions and asks about material gaps instead of inventing product details.
+
+Recommendations then explain which customer need they address, how they support the product's goal, and why they are worth doing within your constraints. The report separates technical checks from later business outcomes and explains which ideas should wait. Focused requests, such as correcting one product title, use only the context needed for that change.
+
+This package supplies instructions and templates. Your coding agent needs access to the relevant project and tools to perform the work; installation alone does not change your website.
+
 ## Install
 
 ### Install in your coding agent
@@ -55,11 +63,17 @@ The skill supports many site types and frameworks; it does not promise rankings.
 
 Example requests:
 
-> Use the seo-engineering skill to audit this project's SEO. Report the findings with evidence and recommend the highest-priority improvements.
+> Use the seo-engineering skill to understand this product and its intended customers, then audit its SEO. Explain which improvements support our main goal, show the evidence, and prioritize work we can complete this week.
 
 > Use seo-engineering to check robots.txt, XML sitemaps, canonical URLs, and redirects. Explain which issues could prevent important pages from being indexed.
 
 > Use seo-engineering to create a content brief for this page, including search intent, headings, and relevant internal links. Identify any research or evidence still needed.
+
+## Testing
+
+The [test cases and evaluation guide](https://github.com/arunacharya1603/seo-engineering/tree/main/tests) cover a software product, a local service, an unclear product, and a focused product-title edit. The [0.2.0 evaluation](https://github.com/arunacharya1603/seo-engineering/blob/main/tests/results/0.2.0/report.md) records actual agent responses, scope checks, and package validation.
+
+These synthetic checks assess recommendations and editing behavior. They do not prove live indexing, traffic, conversions, or ranking improvements; those require measurement on the actual website.
 
 ## Follow the build
 

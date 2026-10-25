@@ -1,0 +1,38 @@
+{
+  "captured": "2026-10-25",
+  "product_page": {
+    "url": "https://ledgerlane.example/",
+    "title": "Work better | LedgerLane",
+    "h1": "Invoice approvals for UK accounting practices",
+    "body": "LedgerLane lets accounting practices collect client approval of supplier invoices, assign reviewers, and retain an approval history. Plans start at GBP 79 per month. Book a demo with our team.",
+    "cta": { "label": "Book a demo", "href": "/book-demo" },
+    "robots": "index,follow",
+    "canonical": "https://ledgerlane.example/",
+    "status": 200
+  },
+  "internal_product_notes": {
+    "source": "product-notes.md, reviewed 2026-10-20",
+    "customer": "UK accounting practices with 5-30 staff, handling supplier invoice approval for their clients",
+    "objective": "More qualified demo requests from accounting practices",
+    "available_features": ["client approval portal", "reviewer assignment", "approval history export"],
+    "not_available": ["free plan", "self-service trial", "invoice creation", "payment processing", "US tax support"],
+    "engineering_budget": "one developer day this week"
+  },
+  "pages": [
+    {"url":"https://ledgerlane.example/use-cases/accounting-practices","status":200,"title":"Invoice approvals for accounting practices | LedgerLane","h1":"Collect client approvals without chasing email","robots":"noindex,follow","canonical":"https://ledgerlane.example/use-cases/accounting-practices","body":"Assign reviewers, collect client decisions, and export approval history. Book a demo.","navigation_link":true},
+    {"url":"https://ledgerlane.example/free-invoice-template","status":200,"title":"Free invoice template | LedgerLane","h1":"Download a free invoice template","robots":"index,follow","canonical":"https://ledgerlane.example/free-invoice-template","body":"A downloadable spreadsheet for making an invoice.","cta":"Download spreadsheet"},
+    {"url":"https://ledgerlane.example/book-demo","status":200,"title":"Book a demo | LedgerLane","robots":"index,follow","canonical":"https://ledgerlane.example/book-demo","body":"Request a demo. Company size and company website are required fields."},
+    {"url":"https://ledgerlane.example/app/clients","status":401,"robots":"noindex,nofollow","body":"Sign in to access client invoice data."}
+  ],
+  "release_note": "The accounting-practices page is a public acquisition landing page. Its noindex directive was copied from a preview template in the last release.",
+  "analytics_export": {
+    "period": "2026-09-21 to 2026-10-18",
+    "attribution": "organic landing-page sessions and qualified demo submissions; sample data for this test only",
+    "rows": [
+      {"page":"/free-invoice-template","organic_sessions":3800,"qualified_demo_submissions":0},
+      {"page":"/","organic_sessions":190,"qualified_demo_submissions":8},
+      {"page":"/use-cases/accounting-practices","organic_sessions":0,"qualified_demo_submissions":0}
+    ]
+  },
+  "missing_data": ["Search Console indexing reports", "keyword volumes", "competitor rankings", "field performance data"]
+}

@@ -1,0 +1,17 @@
+Nova's public page needs a clearer product explanation, but the evidence cannot establish the right customers or keywords. Choosing a category from the name “Nova” would be guesswork.
+
+The supplied evidence.json, captured 25 October 2026, establishes a static HTML public homepage and a separate authenticated application. The offer, shipped capabilities, buyer, market, business model, and intended post-login action are unknown. Product documents and search data are absent. A missing pricing page alone does not demonstrate that one is needed.
+
+**Essential clarification:** What does Nova do today, for whom and in which markets, and what successful action should a new visitor complete after selecting “Get started”? Include the supported capabilities or example workflow the homepage can truthfully describe.
+
+Useful work can still be specified:
+
+1. **P2, high confidence: clarify the homepage proposition after obtaining those facts.** The title “Nova,” H1 “Work smarter,” and body “A better way to get things done” do not explain the customer's task or the offering. Improve this existing page with a descriptive title, clear heading, concrete workflow, supported differentiation, and relevant next step. Do not invent AI features, subscriptions, or a free trial. Scope: homepage only. Effort: a modest copy/HTML change after product input. Risk: inaccurate claims if implemented without context. Technical acceptance: resulting HTML has accurate product content, one descriptive title, a self-canonical, and working links. Business evaluation: the agreed qualified outcome from organic visitors; no baseline is available. **Recommended, awaiting product context.**
+
+2. **P2, medium confidence: check the acquisition path before changing its CTA.** “Get started” leads to /login, whose supplied body describes email sign-in. It is unknown whether new visitors can register there or this serves existing users only. Test the intended journey, then make the label and destination match. No broken path is demonstrated. Acceptance: a new visitor can complete the intended action and the CTA sets accurate expectations. Outcome: qualified completions, rather than clicks to login. **Recommended check, not performed.**
+
+The homepage snapshot shows 200, index,follow, and a self-canonical. These are consistent signals, not proof of crawling, indexing, ranking, or deployed behavior. No definite critical technical blocker appears in this sample. Preserve login exclusion and application authentication while confirming the intended policy. There is no evidence supporting a framework migration.
+
+After clarification, derive candidate themes from the actual customer problem and map related intents to the existing homepage or genuinely useful additional pages. Research demand and inspect search results before selecting targets. “[Verified category] for [verified audience]” is a research prompt, not a validated keyword recommendation. Even measured search volume cannot identify the right customers without product fit.
+
+No source files changed. Get-Content read the evidence; no live checks, browsing, search-account access, build, lint, or runtime tests occurred. Sitemap, robots.txt, deployed output, performance, and conversion metrics remain unverified. No rollback is needed. Product clarification should precede audience-specific copy and keyword selection; it need not delay independent technical checks when implementation access is available.

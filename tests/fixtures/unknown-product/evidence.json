@@ -1,0 +1,11 @@
+{
+  "captured": "2026-10-25",
+  "pages": [
+    {"url":"https://nova.example/","status":200,"title":"Nova","h1":"Work smarter","body":"A better way to get things done.","cta":{"label":"Get started","href":"/login"},"canonical":"https://nova.example/","robots":"index,follow"},
+    {"url":"https://nova.example/login","status":200,"title":"Sign in | Nova","body":"Sign in with email.","robots":"noindex,follow"},
+    {"url":"https://nova.example/app","status":401,"robots":"noindex,nofollow","body":"Authentication required."}
+  ],
+  "repository": {"framework":"static HTML public page plus a separate authenticated application","product_docs":[],"pricing_page":null},
+  "owner_note": "We have not yet supplied what the product does, who buys it, where we sell, or what Get started means after login.",
+  "search_data": null
+}

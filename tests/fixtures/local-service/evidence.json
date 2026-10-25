@@ -1,0 +1,25 @@
+{
+  "captured": "2026-10-25",
+  "business_notes": {
+    "source": "owner-brief.md",
+    "name": "SpokeVisit",
+    "offer": "A mechanic visits the customer's home for bicycle puncture repairs, brake adjustments, and basic servicing.",
+    "service_areas": ["Indiranagar", "Domlur"],
+    "city": "Bengaluru",
+    "languages": ["English", "Kannada"],
+    "goal": "Completed repair bookings within the service area",
+    "storefront": "No walk-in shop. The administrative address is a private residence and is not published.",
+    "constraints": ["No motorbike or electric-bike battery repairs", "No service outside the two listed neighborhoods", "No fabricated reviews"],
+    "languages_available_on_site": ["English"],
+    "not_decided": "Whether the team can maintain Kannada booking support"
+  },
+  "pages": [
+    {"url":"https://spokevisit.example/","status":200,"title":"Home","h1":"Bicycle repairs at your doorstep","body":"Mobile bicycle servicing in Indiranagar and Domlur, Bengaluru. Book a visit.","canonical":"https://spokevisit.example/","robots":"index,follow","links":["/services/brake-adjustment","/book"]},
+    {"url":"https://spokevisit.example/services/brake-adjustment","status":200,"title":"Bicycle brake adjustment at home | SpokeVisit","h1":"Brake adjustment at your home","body":"Book a brake adjustment visit in Indiranagar or Domlur. Available for standard bicycles.","canonical":"https://spokevisit.example/","robots":"index,follow","cta":{"label":"Book a visit","href":"/book?service=brakes"}},
+    {"url":"https://spokevisit.example/book","status":200,"title":"Book a repair | SpokeVisit","canonical":"https://spokevisit.example/book","robots":"noindex,follow","body":"Enter your address and select an available appointment."},
+    {"url":"https://spokevisit.example/booking/abc123","status":401,"robots":"noindex,nofollow","body":"Sign in to see your appointment and contact information."}
+  ],
+  "implementation_notes": "The brake-adjustment page is intended to stand alone in search. The booking form's noindex is intentional because it is an appointment step, not a landing page.",
+  "old_growth_ideas": ["Publish 100 neighborhood pages across Bengaluru", "Add five-star aggregate rating markup", "Advertise electric-bike repairs"],
+  "data_available": "No Search Console, analytics export, customer ratings, street address, or keyword-volume data supplied. Business Profile status is unknown."
+}

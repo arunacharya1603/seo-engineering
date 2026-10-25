@@ -2,9 +2,12 @@
 
 ## Purpose
 - Business/site:
+- Current offer and relevant supported capability:
 - Target audience:
 - User problem:
+- Market, language, and eligibility:
 - Desired outcome / conversion:
+- Context sources, assumptions, and material unknowns:
 
 ## Search intent and keyword evidence
 - Primary topic/query:
@@ -14,11 +17,13 @@
 - Evidence source and date:
 - Competition/search demand notes (only if measured):
 - Existing URL targeting the same intent:
+- Why this intent fits the product and customer:
 
 ## Recommended page
 - Proposed title/H1:
 - URL slug:
 - Page type:
+- Improve an existing page or create one, and why:
 - Meta description draft:
 - Canonical/indexing intent:
 - Recommended CTA:
@@ -66,4 +71,5 @@
 - Indexing checks:
 - Search Console query/page checks:
 - Business conversion metric:
+- Available baseline or measurement gap:
 - Review date:

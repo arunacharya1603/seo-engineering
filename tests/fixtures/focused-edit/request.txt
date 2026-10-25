@@ -1,0 +1,1 @@
+Use the supplied seo-engineering skill to improve only the title element in recycled-tote.html so it accurately describes this product. Read product.md for context. Leave all other page content and files unchanged. Make the edit in this test workspace and report how you checked it. There is no live site or deployment access.
