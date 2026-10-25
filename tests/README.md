@@ -2,14 +2,20 @@
 
 These synthetic cases test how the skill reasons about product context and respects a requested scope. They do not measure live search performance or prove ranking improvements. Test fixtures and results stay in GitHub; they are excluded from the npm package.
 
+## Installer checks
+
+Run `npm ci --ignore-scripts` followed by `npm test` with Node.js 22.20 or newer. The tests pack the release, install that tarball with cached dependencies into a fresh directory containing spaces, and run its real npm executable from a project folder also containing an ampersand. They check help/version, invalid options, installer failure propagation, complete copied assets for Codex/Claude Code/Cursor, temporary-file cleanup, and a reinstall that preserves unrelated files. Test installs disable upstream telemetry and use project scope only.
+
+The installer reuses the pinned `skills` dependency; `npm test` uses `--offline` after dependencies have been downloaded. Global installation and other operating systems require separate validation. Also exercise the default interactive command in a disposable project before releasing installer changes.
+
 ## Run the cases
 
 1. Run the Skill Creator `quick_validate.py` against the skill folder (requires Python and PyYAML). This checks structure, not SEO behavior.
-2. Run `npm pack --ignore-scripts` and extract the archive into an isolated skill directory. Check that the package contains only `README.md`, `SKILL.md`, `package.json`, the official-resources reference, and the two templates.
+2. Run `npm pack --ignore-scripts` and extract the archive into an isolated skill directory. Check the package file allowlist: README, skill, package metadata, CLI, the official-resources reference, and the two templates.
 3. Copy `fixtures/` into a separate working directory. Give an independent agent only the extracted skill, its supporting resources, and each case's `request.txt` and evidence. Do not give it this evaluation guide, expected outcomes, prior responses, or the implementation discussion.
 4. Ask for an actual response to each request. Only `focused-edit` authorizes editing its copied HTML. Keep external access disabled and record essential questions instead of waiting for answers.
 5. Save the responses and evaluate the decisions against the evidence below. For the focused edit, verify that the only changed bytes are inside the title element and that every other fixture file is unchanged.
-6. Install the local tarball in a disposable directory with `npm install --ignore-scripts --no-audit --no-fund --offline <tarball>`. Verify that the installed six files match the archive. No application build is required: this package has no executable code or runtime dependencies.
+6. Install the local tarball in a disposable directory with `npm install --ignore-scripts --no-audit --no-fund --offline <tarball>` after caching its dependencies. Verify that the package's installed files match the archive. For installer changes, run the installer checks above. No website application build is required for this repository.
 
 For a comparison, run the previous skill in a separate directory and agent context with the same requests. A successful baseline must be reported as such; a small synthetic sample cannot establish a general improvement rate.
 
@@ -26,4 +32,5 @@ Judge decisions and actions, not whether the answer repeats particular headings 
 
 ## Recorded runs
 
+- [Version 0.3.0 installer evaluation](results/0.3.0/report.md)
 - [Version 0.2.0 evaluation](results/0.2.0/report.md)

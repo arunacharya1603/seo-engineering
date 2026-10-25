@@ -21,7 +21,7 @@ For a broad SEO task, the agent first summarizes the actual offer, intended cust
 
 Recommendations then explain which customer need they address, how they support the product's goal, and why they are worth doing within your constraints. The report separates technical checks from later business outcomes and explains which ideas should wait. Focused requests, such as correcting one product title, use only the context needed for that change.
 
-This package supplies instructions and templates. Your coding agent needs access to the relevant project and tools to perform the work; installation alone does not change your website.
+This package supplies a skill installer, instructions, and templates. Your coding agent needs access to the relevant project and tools to perform the work; installation alone does not change your website.
 
 ## Install
 
@@ -30,10 +30,22 @@ This package supplies instructions and templates. Your coding agent needs access
 Run this command from your project directory:
 
 ```bash
-npx skills add arunacharya1603/seo-engineering
+npx seo-engineering
 ```
 
-Follow the prompts to choose your coding agent and installation scope. This command requires Node.js and npm.
+Follow the prompts to choose your coding agent and installation scope. Requires Node.js 22.20 or newer and npm. No GitHub username or account is needed.
+
+The command uses the [Skills installer](https://github.com/vercel-labs/skills) to copy the skill bundled with this npm release into the selected agent's skill directory. The installed skill remains available after npm's cache or the temporary installer files are removed.
+
+For a specific agent without prompts:
+
+```bash
+npx seo-engineering --agent codex --yes
+```
+
+Use `claude-code` or `cursor` instead of `codex` for those agents. `--yes` accepts the installer's prompts, including replacing an existing copy. For all projects, add `--global`; for help, run `npx seo-engineering --help`.
+
+To update an installed copy, rerun `npx seo-engineering@latest` and choose the same agent and scope. Because this installs local bundled files, use this command for updates instead of `skills update`.
 
 ### Download from npm
 
@@ -41,10 +53,10 @@ Follow the prompts to choose your coding agent and installation scope. This comm
 npm install --save-dev seo-engineering
 ```
 
-The npm package contains the skill instructions, references, and templates. To install that downloaded copy in your coding agent, run:
+To set up that downloaded copy in your coding agent, run:
 
 ```bash
-npx skills add ./node_modules/seo-engineering
+npx seo-engineering
 ```
 
 ### Manual installation for Codex
@@ -53,7 +65,7 @@ Copy the `seo-engineering` folder into the repository's `.agents/skills/` direct
 
 `.agents/skills/seo-engineering/SKILL.md`
 
-The optional `references/` and `templates/` files should remain alongside `SKILL.md` in the same skill folder.
+Copy `SKILL.md`, `references/`, and `templates/` together; the CLI and `node_modules/` are not needed in the skill folder.
 
 ## Use
 
@@ -70,6 +82,8 @@ Example requests:
 > Use seo-engineering to create a content brief for this page, including search intent, headings, and relevant internal links. Identify any research or evidence still needed.
 
 ## Testing
+
+The installer has automated packed-release checks for Codex, Claude Code, and Cursor. Run `npm ci --ignore-scripts` and `npm test` to reproduce them. See the [0.3.0 installer evaluation](https://github.com/arunacharya1603/seo-engineering/blob/main/tests/results/0.3.0/report.md) for the tested environment, interactive check, and limitations.
 
 The [test cases and evaluation guide](https://github.com/arunacharya1603/seo-engineering/tree/main/tests) cover a software product, a local service, an unclear product, and a focused product-title edit. The [0.2.0 evaluation](https://github.com/arunacharya1603/seo-engineering/blob/main/tests/results/0.2.0/report.md) records actual agent responses, scope checks, and package validation.
 

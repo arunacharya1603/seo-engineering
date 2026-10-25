@@ -1,6 +1,6 @@
 {
   "name": "seo-engineering",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "SEO skills for Codex, Claude Code, and Cursor: technical SEO audits, structured data, indexing, content planning, and implementation with seo-engineering.",
   "keywords": [
     "seo-engineering",
@@ -26,6 +26,7 @@
     "url": "https://github.com/arunacharya1603/seo-engineering/issues"
   },
   "files": [
+    "bin/",
     "SKILL.md",
     "references/",
     "templates/"
@@ -33,5 +34,17 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "skills": "1.7.4"
+  },
+  "bin": {
+    "seo-engineering": "bin/seo-engineering.cjs"
+  },
+  "engines": {
+    "node": ">=22.20.0"
+  },
+  "scripts": {
+    "test": "node --test tests/installer.test.cjs"
   }
 }
