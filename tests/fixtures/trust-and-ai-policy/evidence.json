@@ -1,0 +1,47 @@
+{
+  "captured": "2026-10-25",
+  "product": {
+    "name": "VisitNotes",
+    "offer": "A printable organizer for recording questions before a medical appointment",
+    "audience": "Adults preparing for a discussion with their own clinician",
+    "goal": "Useful downloads of the appointment-question worksheet",
+    "constraints": "No diagnosis, treatment recommendations, or collection of health records"
+  },
+  "page": {
+    "url": "https://visitnotes.example/guides/prepare-for-appointment",
+    "status": 200,
+    "robots": "index,follow",
+    "canonical": "https://visitnotes.example/guides/prepare-for-appointment",
+    "title": "Prepare questions for your appointment | VisitNotes",
+    "content": [
+      "Write down the questions you want to discuss and bring the list to your appointment.",
+      "Our worksheet prevents 90% of diagnostic errors [1].",
+      "Written by Dr Alex Reed, physician and VisitNotes founder.",
+      "Download the printable worksheet. It does not provide medical advice."
+    ],
+    "source_link": "https://research.example/appointment-study",
+    "source_fetch": "404; no study text available",
+    "last_updated_label": "2026-10-24"
+  },
+  "approved_team_profile": {
+    "source": "team-profile.md, approved by founder on 2026-10-20",
+    "name": "Alex Reed",
+    "role": "Product designer and founder",
+    "credential": "PhD in interaction design",
+    "medical_qualification": "Not a physician; no clinical qualification",
+    "experience": "Built the organizer and tested its layout with six volunteers. No health-outcome trial."
+  },
+  "revision_log": {"2026-10-24": "Only the displayed updated date changed; content unchanged since 2026-08-02"},
+  "marketing_proposal": [
+    "Add Physician schema based on the page byline.",
+    "Refresh the updated date every week.",
+    "Add llms.txt and claim it is required to appear in Google AI answers.",
+    "Allow all AI bots, including training crawlers, for more visibility."
+  ],
+  "crawler_policy": {
+    "existing_intent": "Public pages may be searched. The owner does not consent to model-training reuse where crawler controls are available.",
+    "target_answer_provider": "Not yet selected",
+    "current_provider_policy_documents": null
+  },
+  "unavailable": ["Search Console", "search or AI visibility measurements", "independent clinical review", "source study", "current provider crawler documentation"]
+}

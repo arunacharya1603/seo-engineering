@@ -1,0 +1,27 @@
+Keep this documentation focused on helping merchant developers verify and handle their first ParcelHook webhook. The supplied evidence does not justify mandatory personal bylines, FAQs, 2,000 words or additional schema. With half a developer day, prioritize verifying the published example and fixing any observed obstacles to completing it.
+
+The snapshot supports several strengths: `/docs/verify-webhooks` returns 200, permits indexing, declares its own canonical, has a clear title/H1, includes main text and code in HTML, and is linked from documentation navigation. Its links connect setup, retries, a runnable Node.js example and the changelog. These support discovery and task completion, but do not establish actual indexing, the Google-selected canonical, rankings or AI citations.
+
+The content gives concrete instructions about the signature header, raw request body, endpoint secret, timing-safe comparison, timestamp rejection and duplicate-event handling. The supplied CI artifact (`docs-example-tests.txt`, commit `2a7b90c`, 2026-10-23) reports passes for valid signatures, tampered payloads, expired timestamps and duplicate events for the published SDK version. That is useful evidence of tested behavior in that scope. I have not inspected the test implementation, rerun it, verified the deployed example matches it, or established comprehensive security correctness. The page already offers a runnable example and replay test; adding another generic explanation is not an evidenced gap.
+
+The consultant’s proposals should be evaluated individually:
+
+- **Named authors:** keep the accurate “Maintained by ParcelHook engineering” credit and corrections address. Team ownership is relevant accountability for API documentation. A personal bio may help where a particular contributor’s expertise matters, but its absence is not an established defect here. Do not invent authors, credentials or independent reputation.
+- **FAQs on every page:** defer. There is no supplied evidence of unanswered recurring questions. Add a concise troubleshooting answer only when example testing or developer feedback identifies a real problem; an FAQ format is optional.
+- **A 2,000-word minimum:** reject. The 460-word count alone does not establish thinness or completeness. Judge whether a developer can finish the task with the page and its linked resources. Unnecessary expansion could make essential instructions harder to find.
+- **More schema:** defer. Missing JSON-LD is not proof of poor documentation, indexing failure or an AI-discovery barrier. Consider markup later only for an accurate, useful representation or a specifically supported search feature, after checking current official requirements. Offline evidence cannot establish eligibility or a resulting appearance.
+- **Image alt text:** retain `alt=""` for the supplied decorative divider; descriptive or keyword-filled alt text would misrepresent its purpose.
+
+Recommended four-hour allocation, all **recommended/not implemented**:
+
+1. **Two hours: verify example reproducibility and provenance.** Compare the published code with the tested revision, run the existing integration checks in an authorized development environment, and follow the linked example using test-only secrets. Confirm the documented prerequisites and supported SDK version are clear; add them only if absent. This is a P2 verification opportunity, not a known broken example. Acceptance: the documented setup produces a verified event, and tampered, stale and duplicate cases behave as documented. Dependency: repository and runnable environment access.
+2. **One hour: inspect the actual reading and execution path.** Check linked destinations, code copying, mobile readability and keyboard operation. Fix only failures observed. A compact explanation of a reproduced error is preferable to filler. Preserve the existing URL, title, canonical and navigation.
+3. **One hour: rerun affected checks and record results.** Document the tested revision/version, verify rendered instructions and links after any changes, and keep a small reversible patch. There is no basis for a framework migration or broad performance work.
+
+One local Lighthouse mobile run reports 92, LCP 2.1 seconds and CLS 0.01. Those are lab observations, not field Core Web Vitals or proof of a satisfactory experience across users; no INP or real-user distribution is supplied. Do not spend this budget chasing a perfect score.
+
+For business evaluation, establish first-webhook completion rate, time to success and recurring failure categories through a small developer usability exercise or existing privacy-respecting aggregate instrumentation. No baseline exists here. Do not log merchant secrets or payloads. Search Console and dated provider-specific answer samples could later measure discovery separately; passing code tests does not prove either discovery or user completion.
+
+Material questions recorded: does deployed code match the tested revision; which prerequisites or failures stall developers; what completion measurement already exists; which answer provider is relevant?
+
+Files changed: none. Product commands and tests run: none; four CI passes are supplied evidence only. Live checks, current policy verification and field measurements: unavailable. Preserve the private dashboard’s authentication and intentional exclusion. For future edits, rollback is the isolated documentation/example commit; no account changes are needed.

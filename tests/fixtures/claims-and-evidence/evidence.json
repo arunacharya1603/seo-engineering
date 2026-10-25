@@ -1,0 +1,51 @@
+{
+  "captured": "2026-10-25",
+  "product_notes": {
+    "source": "approved-product-brief.md, 2026-10-21",
+    "name": "QueuePilot",
+    "offer": "Shared support inbox with rule-based routing and an audit history",
+    "customers": "UK B2B software support teams with 5-20 agents",
+    "goal": "Qualified demo requests",
+    "available": ["shared inbox", "routing rules", "audit history"],
+    "not_available": ["AI-generated replies", "autonomous ticket resolution", "free plan"],
+    "publication_intent": "/support-routing is a public acquisition page. /app contains private tickets."
+  },
+  "page_snapshot": {
+    "url": "https://queuepilot.example/support-routing",
+    "status": 200,
+    "robots": "noindex,follow",
+    "canonical": "https://queuepilot.example/support-routing",
+    "title": "Route support tickets | QueuePilot",
+    "h1": "Support routing for software teams",
+    "body": [
+      "Route new conversations to the right team using rules and keep a history of each handoff.",
+      "QueuePilot cuts customer resolution time by 70% for every team. See our pilot report [1].",
+      "Trusted by 500 support teams [2].",
+      "Book a demo."
+    ],
+    "linked_from_home": true,
+    "sources": ["[1] /research/pilot", "[2] /customers"]
+  },
+  "source_snapshots": [
+    {
+      "url": "https://queuepilot.example/research/pilot",
+      "status": 200,
+      "title": "Routing pilot, September 2026",
+      "text": "In a two-week internal pilot involving two support teams, median manual assignment time fell from 10 to 3 minutes after enabling routing rules. Customer resolution time was not measured. This was an uncontrolled before/after comparison; no causal estimate was calculated."
+    },
+    {
+      "url": "https://queuepilot.example/customers",
+      "fetch_result": "timeout; no content captured"
+    }
+  ],
+  "release_note": "The public support-routing page inherited noindex from its preview layout.",
+  "private_route": {"url": "https://queuepilot.example/app/tickets", "status": 401, "robots": "noindex,nofollow"},
+  "measurements": {
+    "period": "2026-09-21 to 2026-10-18",
+    "homepage_organic_sessions": 220,
+    "homepage_qualified_demo_requests": 9,
+    "search_console": null,
+    "ai_citation_measurements": null,
+    "keyword_volumes": null
+  }
+}

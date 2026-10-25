@@ -1,0 +1,36 @@
+{
+  "captured": "2026-10-25",
+  "product": {
+    "name": "ParcelHook",
+    "offer": "Shipment-status webhook API for merchant developers",
+    "goal": "Developers successfully verify and handle their first webhook",
+    "owner": "ParcelHook engineering team",
+    "scope": "One public webhook-verification documentation page; private dashboard is outside acquisition scope"
+  },
+  "documentation_page": {
+    "url": "https://parcelhook.example/docs/verify-webhooks",
+    "status": 200,
+    "robots": "index,follow",
+    "canonical": "https://parcelhook.example/docs/verify-webhooks",
+    "title": "Verify webhook signatures | ParcelHook API",
+    "h1": "Verify webhook signatures",
+    "html_contains_main_text_and_code": true,
+    "body": "Verify the X-ParcelHook-Signature header against the raw request body before processing an event. Use the current endpoint secret from your dashboard. The Node.js example below includes a timing-safe comparison. Reject requests older than five minutes and store event IDs to avoid duplicate processing. See the runnable example and replay test below.",
+    "word_count": 460,
+    "links": ["/docs/getting-started", "/docs/retries", "/examples/node-webhook", "/changelog"],
+    "linked_from_docs_navigation": true,
+    "credit": "Maintained by ParcelHook engineering; corrections: docs@parcelhook.example",
+    "individual_author_bio": null,
+    "faq_section": null,
+    "json_ld": null,
+    "image": {"purpose": "decorative divider", "alt": ""}
+  },
+  "supplied_ci_artifact": {
+    "source": "docs-example-tests.txt, commit 2a7b90c, 2026-10-23",
+    "outcomes": {"valid_signature": "passed", "tampered_payload": "passed", "expired_timestamp": "passed", "duplicate_event": "passed"},
+    "scope": "Example integration tests for the published SDK version; not rerun in this review"
+  },
+  "performance_artifact": {"source": "one local Lighthouse mobile run", "performance_score": 92, "lcp_ms": 2100, "cls": 0.01},
+  "private_dashboard": {"status": 401, "robots": "noindex,nofollow", "contains": "merchant secrets and event payloads"},
+  "unavailable": ["field Core Web Vitals", "Search Console", "actual Google-selected canonical", "developer completion rates", "independent reputation research", "AI answer citations"]
+}

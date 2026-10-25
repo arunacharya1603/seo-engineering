@@ -36,6 +36,19 @@
 - Claims to avoid unless substantiated:
 - Author/reviewer requirements:
 
+## Answer and claim review
+Use where material to the page; do not require a citation count, individual author bio, FAQ, or word-count target.
+
+- Reader's main question and concise answer:
+- Conditions or limitations to keep with the answer:
+- Evidence of relevant experience or accountable ownership:
+- Consequential claims needing appropriately qualified review:
+
+| Proposed claim | Evidence and date | What the evidence supports / leaves unverified | Action before publication |
+|---|---|---|---|
+
+Check the actual metric, audience, product, and conditions behind a citation. Mark missing evidence as unverified rather than false; do not invent facts to complete the brief.
+
 ## Outline
 1. Opening / direct response
 2. Main section
@@ -73,3 +86,4 @@
 - Business conversion metric:
 - Available baseline or measurement gap:
 - Review date:
+- Target answer provider / dated observations, if relevant and actually available:

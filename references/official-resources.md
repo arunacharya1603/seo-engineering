@@ -2,6 +2,18 @@
 
 Use these primary sources to verify current behavior and policies. Search-engine features and eligibility rules can change; consult the relevant current page before making a version-sensitive recommendation.
 
+## Content and AI review checkpoints
+
+Checked against the linked official pages on **2026-10-25**. Recheck at use time; these notes are scoped to Google Search, not every answer provider.
+
+| Question | Verified guidance | Primary source |
+|---|---|---|
+| Extra requirements for AI Overviews or AI Mode? | Supporting links must be indexed and eligible for a Search snippet; no additional technical requirements or guaranteed appearance. | [AI features](https://developers.google.com/search/docs/appearance/ai-features) |
+| Special AI markup, llms.txt, or mandatory chunking? | Google does not require them; structure and length should serve the audience. | [Generative AI optimization guide](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide) |
+| Is E-E-A-T a ranking score or mandatory set of badges? | It is contextual quality guidance, not a specific ranking factor; relevant trust evidence matters especially for consequential topics. | [Helpful content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content) |
+
+For crawler controls or measurement features, verify the target provider and the actual available tool/account separately. Do not infer training consent from search visibility goals or claim access to reports not inspected.
+
 ## Google Search Central
 
 - Search Essentials: https://developers.google.com/search/docs/essentials
@@ -10,6 +22,7 @@ Use these primary sources to verify current behavior and policies. Search-engine
 - Google Search spam policies: https://developers.google.com/search/docs/essentials/spam-policies
 - Guidance on generative AI content: https://developers.google.com/search/docs/fundamentals/using-gen-ai-content
 - Guide to optimizing for generative AI features in Google Search: https://developers.google.com/search/docs/fundamentals/ai-optimization-guide
+- AI features and your website: https://developers.google.com/search/docs/appearance/ai-features
 - How Search works: https://developers.google.com/search/docs/fundamentals/how-search-works
 
 ## Crawling, indexing, URLs and migration

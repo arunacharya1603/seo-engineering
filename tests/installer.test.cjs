@@ -9,7 +9,7 @@ const repo = resolve(__dirname, '..');
 const version = require('../package.json').version;
 const npm = process.env.npm_execpath;
 const env = { ...process.env, DISABLE_TELEMETRY: '1', DO_NOT_TRACK: '1', NO_COLOR: '1' };
-const assets = ['SKILL.md', 'references/official-resources.md', 'templates/content-brief-template.md', 'templates/seo-audit-report-template.md'];
+const assets = ['SKILL.md', 'references/content-and-trust-review.md', 'references/official-resources.md', 'templates/content-brief-template.md', 'templates/seo-audit-report-template.md'];
 let workspace;
 let project;
 let cli;
@@ -110,10 +110,14 @@ test('an explicitly accepted reinstall replaces this skill and preserves unrelat
   writeFileSync(join(unrelated, 'SKILL.md'), 'Keep this unrelated skill.');
   writeFileSync(join(target, 'index.html'), '<h1>My website</h1>');
   writeFileSync(join(installed, 'SKILL.md'), 'Older installed version');
+  writeFileSync(join(installed, 'templates', 'seo-audit-report-template.md'), 'Older report template');
+  rmSync(join(installed, 'references', 'content-and-trust-review.md'));
   writeFileSync(join(installed, 'obsolete.txt'), 'Old release asset');
   succeeds(run(cli, ['--agent', 'codex', '--yes'], target));
   assert.deepEqual(files(installed), [...assets].sort());
-  assert.deepEqual(readFileSync(join(installed, 'SKILL.md')), readFileSync(join(repo, 'SKILL.md')));
+  for (const asset of assets) {
+    assert.deepEqual(readFileSync(join(installed, asset)), readFileSync(join(repo, asset)));
+  }
   assert.equal(readFileSync(join(unrelated, 'SKILL.md'), 'utf8'), 'Keep this unrelated skill.');
   assert.equal(readFileSync(join(target, 'index.html'), 'utf8'), '<h1>My website</h1>');
 });

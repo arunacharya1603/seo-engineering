@@ -1,7 +1,7 @@
 ---
 name: seo-engineering
 description: >-
-  Audit and improve website SEO based on the product, audience, and business goals. Use for technical SEO, indexing, content and keyword planning, structured data, internal linking, performance, local or ecommerce SEO, migrations, and validating SEO changes in code. Establish evidence before recommending or implementing changes; never promise rankings.
+  Audit and improve website SEO based on the product, audience, and business goals. Use for technical SEO, indexing, content and keyword planning, structured data, AI search (AEO/GEO), content trust and E-E-A-T reviews, or validating SEO changes in code. Establish evidence before recommending or implementing changes; never promise rankings.
 ---
 
 # SEO Engineering Skill
@@ -108,7 +108,18 @@ Record available baselines before changes: URL counts by template, response-stat
 
 ## 3. Prioritize issues rationally
 
-Use severity and confidence rather than a vague SEO score. A practical priority scale:
+Classify observations before assigning severity. Keep this **assessment** separate from implementation status:
+
+| Assessment | Use when |
+|---|---|
+| Verified issue | Inspected evidence demonstrates a conflict with the page's intended behavior, an applicable requirement, or a factual claim. State the observed scope and source. |
+| Recommendation | A reasoned opportunity could help the audience or outcome, but is not a demonstrated defect or guaranteed improvement. |
+| Intentional choice | Evidence explains the existing behavior; preserve it unless the user authorizes a change. |
+| Not applicable | The check does not fit this page, product, or requested scope; explain why. |
+| Not assessed | Evidence or access is insufficient; identify what would resolve the question. Missing data is not a failure. |
+| No issue observed | A specific check passed within the inspected sample; this does not certify the whole site. |
+
+Use P0–P3 for actionable issues and recommendations, with confidence and effort stated separately. Do not assign defect severity to an intentional choice, an inapplicable check, or an unknown. Avoid invented aggregate SEO, AI-readiness, or E-E-A-T scores. A practical priority scale:
 
 - **P0 — Critical:** Sitewide `noindex`, accidental robots block, wrong canonical across major routes, redirect loop, production outage, widespread 5xx, lost domain/URL migration, security compromise, or another issue preventing important pages from being accessible/indexable.
 - **P1 — High:** Important money/content pages are blocked, canonicalized incorrectly, omitted from navigation/sitemap, render no substantive content, return wrong statuses, or have a systemic template defect.
@@ -228,6 +239,8 @@ For each site/topic:
 A keyword opportunity should have a clear reader, problem, intent, credible content angle, and appropriate next step. Avoid targeting unrelated high-volume trends simply to attract traffic.
 
 ## 7. Content strategy and content briefs
+
+For substantive content quality, answer usefulness, citation, or trust reviews, read [Content and trust review](references/content-and-trust-review.md). Use only the relevant checks; a narrow metadata edit does not require a full content review.
 
 ### Content principles
 
@@ -388,22 +401,23 @@ After change:
 
 Never initiate high-risk migrations, DNS changes or production deployment without explicit authorization.
 
-## 14. AI search, answer engines, AEO and GEO
+## 14. AI search, answer engines, AEO, GEO and AIO
 
-Treat AI-oriented discovery as an extension of solid content and technical fundamentals, not a separate set of guaranteed ranking hacks.
+Treat AI-oriented discovery as an extension of solid content and technical fundamentals. AEO (answer engine optimization) and GEO (generative engine optimization) describe overlapping discovery goals. AIO is ambiguous; when a user uses it, establish whether they mean AI discovery, AI Overviews, or AI-assisted content. These labels are not independent ranking systems or reasons to invent separate scores. For a substantive review, use [Content and trust review](references/content-and-trust-review.md).
 
 - Make important content crawlable, accessible, original, accurate and useful.
 - Communicate entities, product/service details, authorship, dates, methodology and evidence clearly when relevant.
 - Use semantic structure for readability/accessibility and valid structured data where appropriate.
 - Create distinctive material that adds value beyond generic summaries: primary research, demonstrations, first-hand experience, tools, useful comparisons, case studies and transparent trade-offs.
 - Keep canonical/indexing signals consistent and avoid duplicate low-value pages.
-- Verify which search or answer product is being targeted and its current crawler/publisher policies before changing robots rules. Do not block or allow bots blindly.
+- Verify which search or answer product is being targeted and its current crawler/publisher policies before changing robots rules. Search retrieval and model-training controls may differ; preserve the owner's choices and do not infer consent to training from a request for visibility. Record the provider, official source, and verification date. If those are unknown, defer provider-specific changes while continuing supported content and technical work.
 - Check current official guidance before recommending `llms.txt`, “AI schema,” mandatory chunking, query-fan-out pages, or special AI meta tags. Do not invent a ranking benefit for an unsupported convention. Google's current guidance emphasizes foundational SEO and useful original content and does not require special AI markup for its AI search features.
 - Do not fabricate citations, third-party mentions, reviews, expert quotations or “AI visibility” scores.
 - Explain that inclusion in an AI-generated answer or citation cannot be guaranteed and is not equivalent to a standard rank position.
 
 ## 15. Off-page authority and brand trust
 
+- For E-E-A-T (experience, expertise, authoritativeness, and trustworthiness), assess relevant evidence using [Content and trust review](references/content-and-trust-review.md). Treat it as contextual quality guidance, not a measurable Google score or a requirement that every page have an individual author bio.
 - Assess reputation and relevant independent mentions when data is available.
 - Recommend earning recognition through genuinely useful assets, original research, industry participation, relationships, public expertise and legitimate PR.
 - Avoid paid links that pass ranking credit, private blog networks, automated link building, excessive reciprocal links, spam comments, low-quality directories, fake news placements and mass guest-post schemes.
@@ -456,10 +470,11 @@ Do not make large-scale content updates, URL changes, mass redirects, `noindex` 
 
 Adapt the level of detail to the user request. For a full audit, report using the template in `templates/seo-audit-report-template.md`. For content strategy, use `templates/content-brief-template.md`.
 
-For most technical findings, include:
+For actionable technical or content findings, include:
 
 - **Finding:** the issue or opportunity.
-- **Evidence:** file/line, URL/response, report or tool result.
+- **Assessment:** verified issue or recommendation, using section 3; summarize preserved choices and coverage gaps separately when useful.
+- **Evidence:** file/line, URL/response, report or tool result, including source date and whether observed directly or supplied. For content claims, identify the claim and what the source actually supports.
 - **Scope:** affected pages/templates.
 - **Product fit:** the customer need, relevant offer, and intended outcome this change supports.
 - **Priority:** P0–P3 and confidence.
@@ -467,7 +482,7 @@ For most technical findings, include:
 - **Risk/dependency:** deployment, CMS, analytics, legal, or external access.
 - **Validation:** concrete test and expected result.
 - **Outcome check:** the relevant metric and available baseline, or the measurement gap; distinguish this from passing a technical test.
-- **Status:** implemented/tested, implemented/unverified, recommended/not implemented, or blocked.
+- **Implementation status:** not implemented, implemented/tested, implemented/unverified, or blocked; independent of assessment and confidence.
 
 Final reports must list files changed, commands run, tests passed/failed, live checks completed/not completed, and rollback steps for risky changes. Be honest about failure and missing evidence.
 
