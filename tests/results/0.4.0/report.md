@@ -60,6 +60,14 @@ Final release archive: `seo-engineering-0.4.0.tgz`.
 
 The initial behavioral archive had SHA-1 `71e1d3a2964b177def294e00321288441e79b8d8`. Only the reporting clarification in `references/content-and-trust-review.md` differs in the final archive.
 
+## Public release verification
+
+After npm's publishing authentication and processing completed on 2026-10-25, the registry reported **0.4.0** as `latest`, with the exact final SHA-1 and integrity above and the expected `seo-engineering` executable.
+
+A fresh cache and disposable project were used for `npx --yes --prefer-online --cache <fresh-cache> seo-engineering --agent codex --yes`. Installation succeeded from the public registry. All five copied skill assets matched the tested source byte for byte, and the temporary staging source was removed. A subsequent offline version query from that project returned `0.4.0`.
+
+One version-query attempt was mistakenly run from this package's own source directory and hit npm's Windows self-link permission error before invoking the CLI. Repeating it from the intended disposable consumer project succeeded; the public installation itself had already passed.
+
 ## Limits
 
 These are synthetic, offline, single-run agent evaluations reviewed by the implementing agent. Cases within each evaluation shared an agent context; this is not a blinded human study, a cross-model benchmark, or a statistical estimate. The rerun adds confidence for one observed ambiguity, not proof that future agents will always follow the distinction.
